@@ -24,7 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/rody" exact component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/signin" exact component={SignIn} />
         <Route path="/signup" exact component={SignUp} />
         <Route path="/cart" exact component={Cart} />
