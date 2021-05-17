@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rody/static/css/main.8217cd3f.chunk.css",
+    "main.js": "/rody/static/js/main.5fc9fca6.chunk.js",
+    "main.js.map": "/rody/static/js/main.5fc9fca6.chunk.js.map",
+    "runtime-main.js": "/rody/static/js/runtime-main.6906d684.js",
+    "runtime-main.js.map": "/rody/static/js/runtime-main.6906d684.js.map",
+    "static/js/2.65cf275b.chunk.js": "/rody/static/js/2.65cf275b.chunk.js",
+    "static/js/2.65cf275b.chunk.js.map": "/rody/static/js/2.65cf275b.chunk.js.map",
+    "static/js/3.144f056f.chunk.js": "/rody/static/js/3.144f056f.chunk.js",
+    "static/js/3.144f056f.chunk.js.map": "/rody/static/js/3.144f056f.chunk.js.map",
+    "index.html": "/rody/index.html",
+    "static/css/main.8217cd3f.chunk.css.map": "/rody/static/css/main.8217cd3f.chunk.css.map",
+    "static/js/2.65cf275b.chunk.js.LICENSE.txt": "/rody/static/js/2.65cf275b.chunk.js.LICENSE.txt",
+    "static/media/vector-creator.c1fc104d.png": "/rody/static/media/vector-creator.c1fc104d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6906d684.js",
+    "static/js/2.65cf275b.chunk.js",
+    "static/css/main.8217cd3f.chunk.css",
+    "static/js/main.5fc9fca6.chunk.js"
+  ]
+}
