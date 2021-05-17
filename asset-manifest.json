@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rody/static/css/main.8217cd3f.chunk.css",
-    "main.js": "/rody/static/js/main.5fc9fca6.chunk.js",
-    "main.js.map": "/rody/static/js/main.5fc9fca6.chunk.js.map",
+    "main.js": "/rody/static/js/main.f88428a8.chunk.js",
+    "main.js.map": "/rody/static/js/main.f88428a8.chunk.js.map",
     "runtime-main.js": "/rody/static/js/runtime-main.6906d684.js",
     "runtime-main.js.map": "/rody/static/js/runtime-main.6906d684.js.map",
     "static/js/2.65cf275b.chunk.js": "/rody/static/js/2.65cf275b.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.6906d684.js",
     "static/js/2.65cf275b.chunk.js",
     "static/css/main.8217cd3f.chunk.css",
-    "static/js/main.5fc9fca6.chunk.js"
+    "static/js/main.f88428a8.chunk.js"
   ]
 }
