@@ -40,6 +40,7 @@ const Foot = styled.div`
   background-color: #f2f2f2;
   width: 100vw;
   height: 50vh;
+  font-size: 1.5rem;
   .footer {
     display: flex;
   }

@@ -99,6 +99,8 @@ const ManagProd = styled.div`
   box-shadow: 0px 0px 15px 3px rgba(21, 19, 46, 0.192);
   padding: 1.5rem 0rem 1.5rem 1.5rem;
   border-radius: 15px;
+  font-size: 1.6rem;
+
   .main {
     height: 100%;
 
@@ -117,9 +119,10 @@ const Card = styled.div`
   padding: 0.5rem;
   display: flex;
   border-radius: 10px;
+
   .image {
     width: 6rem;
-    padding: 0.3rem;
+    padding: 0.5rem;
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -131,7 +134,7 @@ const Card = styled.div`
     padding: 0.5rem;
   }
   img {
-    width: 5rem;
+    width: 6rem;
     border-radius: 5px;
   }
   .buttons {
@@ -142,7 +145,7 @@ const Card = styled.div`
     padding: 0.8rem 0.5rem;
 
     p {
-      font-size: 0.9rem;
+      font-size: 1.5rem;
     }
   }
   .right {
@@ -154,7 +157,7 @@ const Card = styled.div`
 
   button {
     border: none;
-    width: 5rem;
+    width: 6rem;
     border-radius: 7px;
     margin-left: 0.5rem;
     padding: 0.5rem 0.8rem;
@@ -173,11 +176,11 @@ const Card = styled.div`
     cursor: pointer;
     color: white;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .delete {
     background: #b91f1f;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 `;
 

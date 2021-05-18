@@ -75,7 +75,7 @@ const Home = () => {
 };
 
 const HomeStyle = styled.div`
-  min-height: 95vh;
+  min-height: 90vh;
   width: 100vw;
   .ads {
     height: 90vh;
@@ -83,13 +83,13 @@ const HomeStyle = styled.div`
   }
   .cover1 {
     background: #e8eee4;
-    height: 60vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
   }
 
   .cover1-right {
-    height: 60vh;
+    height: 90vh;
     width: 55vw;
     display: flex;
     align-items: center;
@@ -101,31 +101,32 @@ const HomeStyle = styled.div`
     flex-direction: column;
     justify-content: space-around;
     p {
-      font-size: 0.8rem;
+      font-size: 1.5rem;
     }
 
     h1 {
-      font-size: calc(2.5rem + 1vh);
+      font-size: calc(5rem + 1vh);
     }
     a {
-      padding: 0.7rem 1.4rem;
+      padding: 1.2rem 2rem;
       cursor: pointer;
       background: black;
       color: white;
       border-radius: 10px;
+      font-size: 1.5rem;
     }
     .link {
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
   }
   .cover1-left {
-    height: 60vh;
+    height: 90vh;
     width: 45vw;
 
     .image {
-      padding-top: 1rem;
+      padding-top: 5rem;
 
-      height: 60vh;
+      height: 90vh;
       width: 45vw;
       display: flex;
       align-items: center;
@@ -148,6 +149,10 @@ const HomeSection = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
 `;
 
