@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/rody/static/css/main.288b153f.chunk.css",
-    "main.js": "/rody/static/js/main.692645a6.chunk.js",
-    "main.js.map": "/rody/static/js/main.692645a6.chunk.js.map",
+    "main.css": "/rody/static/css/main.cd941b00.chunk.css",
+    "main.js": "/rody/static/js/main.fe82e3b9.chunk.js",
+    "main.js.map": "/rody/static/js/main.fe82e3b9.chunk.js.map",
     "runtime-main.js": "/rody/static/js/runtime-main.3ff390b6.js",
     "runtime-main.js.map": "/rody/static/js/runtime-main.3ff390b6.js.map",
     "static/js/2.31473f88.chunk.js": "/rody/static/js/2.31473f88.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.39a27d15.chunk.js": "/rody/static/js/3.39a27d15.chunk.js",
     "static/js/3.39a27d15.chunk.js.map": "/rody/static/js/3.39a27d15.chunk.js.map",
     "index.html": "/rody/index.html",
-    "static/css/main.288b153f.chunk.css.map": "/rody/static/css/main.288b153f.chunk.css.map",
+    "static/css/main.cd941b00.chunk.css.map": "/rody/static/css/main.cd941b00.chunk.css.map",
     "static/js/2.31473f88.chunk.js.LICENSE.txt": "/rody/static/js/2.31473f88.chunk.js.LICENSE.txt",
     "static/media/boy.b54ded85.png": "/rody/static/media/boy.b54ded85.png",
     "static/media/vector-creator.c1fc104d.png": "/rody/static/media/vector-creator.c1fc104d.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.3ff390b6.js",
     "static/js/2.31473f88.chunk.js",
-    "static/css/main.288b153f.chunk.css",
-    "static/js/main.692645a6.chunk.js"
+    "static/css/main.cd941b00.chunk.css",
+    "static/js/main.fe82e3b9.chunk.js"
   ]
 }
