@@ -5,17 +5,19 @@ import Card from "./Card";
 import { getAllProducts } from "../admin/helper/adminapicall";
 import { Link, animateScroll as scroll } from "react-scroll";
 import boy from "../img/boy.png";
+import Loader from "./Loader";
 
 const Home = () => {
   const [product, setProduct] = useState([]);
   const [error, setError] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   const loadAllProducts = () => {
     getAllProducts().then((data) => {
       if (data.error) {
         setError(data.error);
       } else {
         setProduct(data);
+        setLoading(!loading);
       }
     });
   };
@@ -37,7 +39,6 @@ const Home = () => {
                   Summer Collection.
                 </h1>
                 <div className="link">
-                  {" "}
                   <Link
                     activeClass="active"
                     to="main"
@@ -59,15 +60,18 @@ const Home = () => {
         </div>
         <HomeSection>
           <h1 id="main">All T-shirts</h1>
-
-          <div className="products">
-            {product.map((prod, index) => {
-              {
-                /* console.log(prod); */
-              }
-              return <Card product={prod} key={index} />;
-            })}
-          </div>
+          {loading ? (
+            <Loader />
+          ) : (
+            <div className="products">
+              {product.map((prod, index) => {
+                {
+                  /* console.log(prod); */
+                }
+                return <Card product={prod} key={index} />;
+              })}
+            </div>
+          )}
         </HomeSection>
       </HomeStyle>
     </Base>
@@ -146,7 +150,7 @@ const HomeSection = styled.div`
   .products {
     min-height: 80vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
   }

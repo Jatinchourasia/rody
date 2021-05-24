@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 import { isAutheticated } from "../auth/helper";
 import { deleteProduct, getAllProducts } from "./helper/adminapicall";
 import ImageHelper from "../user/helper/imageHelper";
+import Loader from "../core/Loader";
 
 const ManageProduct = () => {
   // state
 
   const [products, setProducts] = useState([]);
+
+  const [loading, setLoading] = useState(true);
   const { user, token } = isAutheticated();
+
   // useeffect
   const preload = () => {
     getAllProducts().then((data) => {
@@ -19,6 +23,7 @@ const ManageProduct = () => {
         console.log(data.err);
       } else {
         setProducts(data);
+        setLoading(!loading);
       }
     });
   };
@@ -45,46 +50,50 @@ const ManageProduct = () => {
         <div className="headre">
           <h2>Manage Product</h2>
         </div>
-        <div className="main">
-          {products.map((product, index) => {
-            return (
-              <Card key={index}>
-                <div className="image">
-                  {/* todo photo */}
-                  <ImageHelper product={product} />
-                </div>
-                <div className="details">
-                  <div className="info">
-                    <div className="right">
-                      <p>name : {product.name}</p>
-                      <p>price : $ {product.price}</p>
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className="main">
+            {products.map((product, index) => {
+              return (
+                <Card key={index}>
+                  <div className="image">
+                    {/* todo photo */}
+                    <ImageHelper product={product} />
+                  </div>
+                  <div className="details">
+                    <div className="info">
+                      <div className="right">
+                        <p>name : {product.name}</p>
+                        <p>price : $ {product.price}</p>
+                      </div>
+                      <div className="left">
+                        <p>stocks : {product.stock}</p>
+                        <p>sold : {product.sold}</p>
+                      </div>
                     </div>
-                    <div className="left">
-                      <p>stocks : {product.stock}</p>
-                      <p>sold : {product.sold}</p>
+                    <div className="buttons">
+                      <Link
+                        to={`/admin/product/update/${product._id}`}
+                        className="update"
+                      >
+                        Update
+                      </Link>
+                      <button
+                        onClick={() => {
+                          deleteThisProduct(product._id);
+                        }}
+                        className="delete"
+                      >
+                        Delete
+                      </button>
                     </div>
                   </div>
-                  <div className="buttons">
-                    <Link
-                      to={`/admin/product/update/${product._id}`}
-                      className="update"
-                    >
-                      Update
-                    </Link>
-                    <button
-                      onClick={() => {
-                        deleteThisProduct(product._id);
-                      }}
-                      className="delete"
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+                </Card>
+              );
+            })}
+          </div>
+        )}
       </ManagProd>
     );
   };

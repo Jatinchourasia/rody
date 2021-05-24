@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { isAutheticated } from "../auth/helper";
 import AdminDashBoard from "../user/AdminDashBoard";
 
 const AdminInfo = () => {
+  const {
+    user: { name, email },
+  } = isAutheticated();
   const admin = () => {
     return (
       <Admn>
         <div className="headre">
           <h2>Dashboard</h2>
         </div>
-        <div className="main"></div>
+        <div className="main">
+          <h2>userName: {name}</h2>
+
+          <h2>Email: {email} </h2>
+        </div>
       </Admn>
     );
   };

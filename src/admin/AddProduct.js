@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Redirect, useHistory } from "react-router";
 import styled from "styled-components";
 import { isAutheticated } from "../auth/helper/index";
+import Loader from "../core/Loader";
 import AdminDashBoard from "../user/AdminDashBoard";
 import { createProduct, getCategories } from "./helper/adminapicall";
 
@@ -76,7 +77,7 @@ const AddProduct = () => {
     setValues({ ...values, error: "", loading: true });
     createProduct(user._id, token, formData).then((data) => {
       if (data.error) {
-        setValues({ ...values, error: data.error });
+        setValues({ ...values, error: data.error, loading: true });
       } else {
         setValues({
           ...values,
@@ -184,7 +185,7 @@ const AddProduct = () => {
         <div className="headre">
           <h2>Create Product</h2>
         </div>
-        <div className="main">{productForm()}</div>
+        {loading ? <Loader /> : <div className="main">{productForm()}</div>}
       </AddProd>
     );
   };

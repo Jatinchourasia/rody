@@ -8,7 +8,6 @@ const AddCategory = () => {
   const [name, setName] = useState();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
   const { user, token } = isAutheticated();
 
   const handleChange = (event) => {
@@ -18,6 +17,7 @@ const AddCategory = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
+
     setError("");
     setSuccess(false);
     // backend req fired

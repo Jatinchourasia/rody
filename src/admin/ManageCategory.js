@@ -7,11 +7,12 @@ import { Link } from "react-router-dom";
 
 import { isAutheticated } from "../auth/helper";
 import { deleteCategory, getCategories } from "./helper/adminapicall";
+import Loader from "../core/Loader";
 
 const ManageCategories = () => {
   // state
   const [categories, setCategories] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   // user info
 
   const { user, token } = isAutheticated();
@@ -24,6 +25,7 @@ const ManageCategories = () => {
         console.log(data.err);
       } else {
         setCategories(data);
+        setLoading(!loading);
       }
     });
   };
@@ -50,33 +52,37 @@ const ManageCategories = () => {
         <div className="headre">
           <h2>Manage Categories</h2>
         </div>
-        <div className="main">
-          {categories.map((category, index) => {
-            return (
-              <Card key={index}>
-                <div className="right">
-                  <h3>{category.name}</h3>
-                </div>
-                <div className="buttons">
-                  <Link
-                    to={`/admin/category/update/${category._id}`}
-                    className="update"
-                  >
-                    Update
-                  </Link>
-                  <button
-                    onClick={() => {
-                      deleteThisCategory(category._id);
-                    }}
-                    className="delete"
-                  >
-                    Delete
-                  </button>
-                </div>
-              </Card>
-            );
-          })}
-        </div>
+        {loading ? (
+          <Loader />
+        ) : (
+          <div className="main">
+            {categories.map((category, index) => {
+              return (
+                <Card key={index}>
+                  <div className="right">
+                    <h3>{category.name}</h3>
+                  </div>
+                  <div className="buttons">
+                    <Link
+                      to={`/admin/category/update/${category._id}`}
+                      className="update"
+                    >
+                      Update
+                    </Link>
+                    <button
+                      onClick={() => {
+                        deleteThisCategory(category._id);
+                      }}
+                      className="delete"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        )}
       </ManagCate>
     );
   };
