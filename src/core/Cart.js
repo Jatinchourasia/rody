@@ -56,48 +56,47 @@ const Cart = () => {
           </div>
         </div>
         <div className="chkout">
-          {isAutheticated() && (
-            <div className="ckeckout">
-              <div className="checkcard">
-                <div className="header">Username</div>
-                <p>
-                  <i className="fa fa-user" aria-hidden="true"></i>
-                  {user.name}
-                </p>
-              </div>
-              <div className="checkcard">
-                <div className="header">Email</div>
-                <p>
-                  <i className="fas fa-envelope-open"></i>
-                  {user.email}
-                </p>
-              </div>
-              <div className="bill">
-                <div className="subtotl">
-                  <p>Sub-total :</p>
-                  <p>$ {getFinalPrice()} </p>
-                </div>
-                <div className="taxes">
-                  <p>Taxes :</p>
-                  <p>free </p>
-                </div>
-                <div className="linee"></div>
-                <div className="grandtotal">
-                  <h2>Total price</h2>
-                  <h2>$ {getFinalPrice()}</h2>
-                </div>
-              </div>
-              <div className="payment-button">
-                <StripeCheckout
-                  products={products}
-                  setReload={setReload}
-                  reload={reload}
-                />
-              </div>
+          <div className="ckeckout">
+            <div className="checkcard">
+              <div className="header">Username</div>
 
-              {/* <BraintreePay products={products} setReload={setReload} /> */}
+              <p>
+                <i className="fa fa-user" aria-hidden="true"></i>
+                {isAutheticated() && user.name}
+              </p>
             </div>
-          )}
+            <div className="checkcard">
+              <div className="header">Email</div>
+              <p>
+                <i className="fas fa-envelope-open"></i>
+                {isAutheticated() && user.email}
+              </p>
+            </div>
+            <div className="bill">
+              <div className="subtotl">
+                <p>Sub-total :</p>
+                <p>$ {getFinalPrice()} </p>
+              </div>
+              <div className="taxes">
+                <p>Taxes :</p>
+                <p>free </p>
+              </div>
+              <div className="linee"></div>
+              <div className="grandtotal">
+                <h2>Total price</h2>
+                <h2>$ {getFinalPrice()}</h2>
+              </div>
+            </div>
+            <div className="payment-button">
+              <StripeCheckout
+                products={products}
+                setReload={setReload}
+                reload={reload}
+              />
+            </div>
+
+            {/* <BraintreePay products={products} setReload={setReload} /> */}
+          </div>
         </div>
         .
       </div>

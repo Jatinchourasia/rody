@@ -104,6 +104,17 @@ const Styledbtn = styled.div`
     border-radius: 10px;
     font-family: "Poppins", sans-serif;
   }
+  a {
+    text-decoration: none;
+    margin: 1rem;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+  }
 `;
 
 export default StripeCheckout;

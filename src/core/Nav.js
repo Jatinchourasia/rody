@@ -92,6 +92,14 @@ const Nav = ({ history }) => {
           </li>
         </ul>
       </div>
+      {!isAutheticated() && (
+        <div className="account">
+          <h2>
+            for full functionality use <span> email:admin@gmail.com</span> and{" "}
+            <span> password:admin@gmail.com</span>
+          </h2>
+        </div>
+      )}
     </Navigation>
   );
 };
@@ -128,6 +136,19 @@ const Navigation = styled.div`
   }
   span {
     cursor: pointer;
+  }
+
+  .account {
+    background-color: black;
+    color: white;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+    }
   }
 `;
 
