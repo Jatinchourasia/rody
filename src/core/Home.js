@@ -126,7 +126,9 @@ const HomeStyle = styled.div`
   .cover1-left {
     height: 90vh;
     width: 45vw;
-
+@media (max-width: 768px) {
+     display:none;
+    }
     .image {
       padding-top: 5rem;
 
@@ -137,6 +139,7 @@ const HomeStyle = styled.div`
       justify-content: center;
     }
   }
+    
   img {
     width: auto;
     height: 100%;
