@@ -95,7 +95,7 @@ const Nav = ({ history }) => {
       {!isAutheticated() && (
         <div className="account">
           <h2>
-            for full functionality use <span> email:admin@gmail.com</span> and{" "}
+            credientails for Admin account <span> email:admin@gmail.com</span> and{" "}
             <span> password:admin@gmail.com</span>
           </h2>
         </div>
